@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 整体透明画布 -->
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <!-- 扫描取景框 -->
+    <com.ytmall.zxing.view.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/llPayCode"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg"
+        android:layout_above="@+id/llBottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/round_white_bg"
+            android:layout_margin="30dp"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imgCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/my_code_bg"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnScannr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:drawableTop="@drawable/img_scannr_normal"
+            android:text="@string/btn_scannr"
+            android:textSize="@dimen/txt_normal"
+            android:visibility="gone"
+            android:drawablePadding="5dp"
+            android:lineSpacingExtra="10dp"
+            android:textColor="@color/hint"
+            android:layout_gravity="center"/>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnPayCode"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="@string/btn_pay_code"
+            android:textSize="@dimen/txt_normal"
+            android:drawablePadding="5dp"
+            android:lineSpacingExtra="10dp"
+            android:textColor="@color/hint"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

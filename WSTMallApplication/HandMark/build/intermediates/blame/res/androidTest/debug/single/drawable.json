@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
+    },
+    {
+        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_bg_bottom.xml"
+    }
+]

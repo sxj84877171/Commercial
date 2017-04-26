@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">云堂商城</string>
+    <string name="action_settings">Settings</string>
+
+    
+        <!-- net info -->
+    <string name="net_error">网络错误!</string>
+    <string name="loading_more_data">正在加载更多数据</string>
+    
+    <!-- 扫描二维码 -->
+    <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
+    <!-- 图片浏览 -->
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完 成</string>
+    <string name="invalidSD">sdcard无效或没有插入！</string>
+    <string name="photo">选择相册</string>
+    <string name="album">相册</string>
+    <string name="preview">预览</string>
+    <string name="unfinished">未完成</string>
+    <string name="camera_cancel">取消</string>
+    <string name="no_photo">相册没有图片</string>
+
+    <string name="txt_recharge_use">可用余额（元）</string>
+    <string name="txt_recharge_unuse">冻结余额（元）</string>
+    <string name="txt_recharge_choose">选择充值金额</string>
+    <string name="btn_recharge">立即充值</string>
+    <string name="notice_title">会员卡金额到账须知：</string>
+    <string name="notice_content">1、充值成功后，</string>
+
+    <string name="login_account">账号</string>
+    <string name="login_pwd">密码</string>
+    <string name="login_account_hint">请输入手机号</string>
+    <string name="login_pwd_hint">请输入密码</string>
+    <string name="btn_login">登录</string>
+    <string name="btn_register">注册云堂账号</string>
+    <string name="forget_pwd">忘记密码</string>
+    <string name="choose_account">账号选择</string>
+    <string name="code">验证码</string>
+    <string name="get_code_hint">请输入验证码</string>
+    <string name="get_code_again">重新获取</string>
+    <string name="get_code">点击获取</string>
+    <string name="register">注册</string>
+    <string name="choose_account_hint">请选择云联或大唐账号</string>
+    <string name="confirm">确定</string>
+
+    <string name="btn_scannr">扫码</string>
+    <string name="btn_pay_code">付款码</string>
+    <string name="msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+    <string name="button_ok">OK</string>
+    <string name="viewfinderview_status_text1">将二维码/条码放入取景框内</string>
+    <string name="viewfinderview_status_text2">即可自动扫描</string>
+
+    <string name="txt_shop">云堂商城</string>
+    <string name="txt_shop_describ">云堂商城,您身边的购物商城</string>
+    <string name="txt_eng_rights">Copyright © 2015-2016</string>
+    <string name="txt_chinese_rights">长沙慕马文化传播有限公司</string>
+
+    <string name="soft_update_no">已经是最新版本</string>
+    <string name="soft_update_title">软件更新</string>
+    <string name="soft_update_info">检测到新版本，立即更新吗</string>
+    <string name="soft_update_updatebtn">更新</string>
+    <string name="soft_update_later">稍后更新</string>
+    <string name="soft_updating">正在更新</string>
+    <string name="soft_update_cancel">取消</string>
+</resources>

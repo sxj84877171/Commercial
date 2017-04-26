@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:showu="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/llShopTakeMoney"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ytmall.widget.TitleWidget
+        android:id="@id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        showu:center_view_text="商家提现"
+        showu:left_visibility="visible" />
+    <LinearLayout
+        android:id="@+id/llBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_normal"
+            android:textColor="@color/center_bottom"
+            android:text="银行卡"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/txt_normal"
+            android:id="@+id/txtBankAccount"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/arrow_right"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/txt_old_pwd"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_normal"
+            android:textColor="@color/center_bottom"
+            android:text="金额(元)"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            android:textColor="@color/center_bottom"
+            android:textSize="@dimen/txt_normal"
+            android:id="@+id/etMoney"
+            android:layout_marginLeft="10dp"
+            android:background="@color/transparent"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/arrow_right"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/txt_old_pwd"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSure"
+        android:background="@drawable/btn_login_bg"
+        android:layout_margin="30dp"
+        android:text="确 定"
+        android:textSize="@dimen/txt_normal"
+        android:textColor="@color/white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="最低提现金额为1元，只能提现到可用余额"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/txt_old_pwd"
+        android:textSize="@dimen/txt_normal"/>
+
+
+</LinearLayout>

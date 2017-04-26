@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:showu="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ytmall.widget.TitleWidget
+        android:id="@id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        showu:center_view_text=""
+        showu:right_visibility="invisible" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:padding="10dp"
+        android:id="@+id/txtUserNumber"/>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pullList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

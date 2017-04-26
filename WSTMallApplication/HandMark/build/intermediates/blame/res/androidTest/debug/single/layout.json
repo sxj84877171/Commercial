@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    }
+]

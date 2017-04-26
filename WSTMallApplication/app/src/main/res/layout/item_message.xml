@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/layout_selecter"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:layout_marginBottom="12dp">
+    <ImageView
+        android:id="@+id/iv_message"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/person_message"/>
+<TextView
+    android:id="@+id/tv_message"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:lines="1"
+    android:textSize="16sp"
+    android:ellipsize="end"
+    android:text="超级无敌大减价啊爱爱啊啊啊啊啊啊啊啊啊啊啊啊啊 啊啊"
+    android:layout_marginRight="20dp"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="8dp"
+    android:layout_toRightOf="@id/iv_message"
+    />
+<TextView
+    android:id="@+id/tv_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:text="2015-07-01 00:42:09"
+    android:textColor="@color/gray_deep_other"
+    android:layout_marginRight="20dp"
+    android:textSize="14sp"
+    />
+    <ImageView
+        android:id="@+id/iv_point_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/point_message"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+       />
+</RelativeLayout>
+</LinearLayout>

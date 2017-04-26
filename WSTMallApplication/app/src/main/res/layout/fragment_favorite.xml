@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.ytmall.widget.TitleWidget
+        android:id="@id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabIndicatorColor="#F6772A"
+        app:tabSelectedTextColor="#F6772A"
+        app:tabTextColor="#858585">
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

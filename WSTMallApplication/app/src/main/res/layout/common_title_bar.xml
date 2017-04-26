@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="#F6773A">
+    <ImageButton
+        android:id="@+id/imgBack"
+        android:layout_width="@dimen/title_item_width"
+        android:layout_height="@dimen/title_item_height"
+        android:src="@drawable/title_back"
+        android:background="@drawable/pressed_dark_bg"
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_big"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/txtRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_normal"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"/>
+    <View
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/list_line"/>
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+        <!--<ImageView-->
+            <!--android:layout_width=""-->
+            <!--android:layout_height="" />-->
+        <!---->
+    <!--</LinearLayout>-->
+
+
+</RelativeLayout>

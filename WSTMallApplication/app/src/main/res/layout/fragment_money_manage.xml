@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:id="@+id/scrollMoney">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/img_myjb"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"/>
+        <TextView
+
+            android:id="@+id/txtMyMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/nick_hint"
+            android:textSize="@dimen/txt_big_normal"
+            android:text="我的金额"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/txtUseMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/txt_big"
+            android:textColor="@color/center_bottom"/>
+        <TextView
+            android:id="@+id/txtLockMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/txt_big"
+            android:textColor="@color/center_bottom"/>
+        <TextView
+            android:id="@+id/txtDistributMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/txt_big"
+            android:textColor="@color/center_bottom"/>
+        <Button
+            android:id="@+id/btnTakeMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="提现"
+
+            android:layout_margin="25dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_normal"
+            android:background="@drawable/btn_login_bg"/>
+        <LinearLayout
+            android:id="@+id/llTakeCash"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我的提现账户"
+                android:textSize="@dimen/txt_normal"
+                android:textColor="@color/edit_txt"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/txtAccountNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="@dimen/txt_normal"
+                android:textColor="@color/edit_txt"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个"
+                android:textSize="@dimen/txt_normal"
+                android:textColor="@color/edit_txt"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/arrow_right"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/arrow_right"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首次提现步骤"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/myred"
+                android:textSize="@dimen/txt_normal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
