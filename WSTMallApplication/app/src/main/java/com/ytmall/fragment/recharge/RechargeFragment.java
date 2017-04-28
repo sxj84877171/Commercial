@@ -2,13 +2,16 @@ package com.ytmall.fragment.recharge;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ytmall.R;
@@ -37,7 +40,13 @@ public class RechargeFragment extends BaseFragment implements View.OnClickListen
     private EditText et_remark;
     @InjectView(id = R.id.btn_recharge)
     private Button btn_recharge;
+    @InjectView(id = R.id.pay_type_name)
+    private TextView pay_type_name;
+    @InjectView(id = R.id.choose_pay)
+    private View choose_pay;
     private RechargeOrder param;
+
+    private int type = 0;
     @Override
     protected void requestSuccess(String url, String data) {
         if (url.contains(param.getA())){
@@ -49,6 +58,7 @@ public class RechargeFragment extends BaseFragment implements View.OnClickListen
                 i.putExtra("money",result.recharge_money);
                 i.putExtra("orderNo",result.recharge_sn);
                 i.putExtra("rechargeId",result.recharge_id);
+                i.putExtra("type",type);
                 startActivity(i);
                 getActivity().finish();
 
@@ -80,6 +90,7 @@ public class RechargeFragment extends BaseFragment implements View.OnClickListen
                 startActivity(i);
             }
         });
+        choose_pay.setOnClickListener(this);
     }
 
     @Override
@@ -98,6 +109,20 @@ public class RechargeFragment extends BaseFragment implements View.OnClickListen
 
 
                 break;
+        }
+        if (v.getId() == R.id.choose_pay) {
+            new AlertDialog.Builder(getActivity()).setSingleChoiceItems(new String[]{"微信支付", "支付宝支付"}, type, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    type = which;
+                    if (which == 0) {
+                        pay_type_name.setText("微信支付");
+                    } else {
+                        pay_type_name.setText("支付宝支付");
+                    }
+                    dialog.dismiss();
+                }
+            }).show();
         }
     }
     private void getRechargeOrder(){
