@@ -53,6 +53,10 @@ public class ShopMoneyManageFragment extends BaseFragment implements View.OnClic
     LinearLayout llTakeCash;
     @InjectView(id = R.id.txtAccountNumber)
     TextView txtAccountNumber;
+    @InjectView(id = R.id.txtJinMoney)
+    TextView txtJinMoney;
+    @InjectView(id = R.id.txtLockJinMoney)
+    TextView txtLockJinMoney;
 
     private CheckPayPwd pwdParam;
     private PayPwdPopWindow payPop;
@@ -110,13 +114,19 @@ public class ShopMoneyManageFragment extends BaseFragment implements View.OnClic
         txtMyMoney.setText("商家金额");
         txtUseMoney.setText("商家可用金额：¥"+Const.user.shopMoney);
         txtLockMoney.setText("商家冻结金额：¥"+Const.user.shopLockMoney);
+        txtJinMoney.setText("金堂宝: ￥" + trimString(Const.user.jinMoney));
+        txtLockJinMoney.setText("金堂宝: ￥" +trimString(Const.user.lockJinMoney));
         txtDistributMoney.setVisibility(View.GONE);
 
         btnTakeMoney.setOnClickListener(this);
         llTakeCash.setOnClickListener(this);
+    }
 
-
-
+    private String trimString(String src){
+        if(src != null){
+            return src.trim();
+        }
+        return "";
     }
 
     @Override

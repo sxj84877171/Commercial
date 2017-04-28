@@ -317,6 +317,9 @@
             android:name=".activity.money.ShopTakeMoneyActivity"
             android:screenOrientation="portrait"/>
         <activity
+            android:name="com.ytmall.fragment.money.CheckPhoneActivity"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".activity.money.EditBankAccountActivity"
             android:screenOrientation="portrait"/>
         <activity
