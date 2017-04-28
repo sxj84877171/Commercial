@@ -12,12 +12,36 @@
         "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\switch_thumb_material_light.xml"
     },
     {
+        "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
         "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
         "source": "E:\\workspace\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_primary_text_material_light.xml"
     },
     {
+        "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
         "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
         "source": "E:\\workspace\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
@@ -38,6 +62,10 @@
     {
         "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
         "source": "E:\\workspace\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
+        "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_search_url_text.xml"
     },
     {
         "merged": "E:\\workspace\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
@@ -92,6 +120,10 @@
         "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_primary_text_disable_only_material_light.xml"
     },
     {
+        "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
         "merged": "E:\\workspace\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
         "source": "E:\\workspace\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_primary_text_material_light.xml"
     },
@@ -106,5 +138,9 @@
     {
         "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
         "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     }
 ]

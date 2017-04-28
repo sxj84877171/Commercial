@@ -449,7 +449,7 @@
                     android:layout_height="50dp"
                     android:gravity="center_vertical"
                     android:padding="10dp"
-                    android:text="每日从银堂宝返金堂宝比例 0.00%"
+                    android:text="上一天单元转换堂宝数 | 40000"
                     android:textStyle="bold" />
             </LinearLayout>
 

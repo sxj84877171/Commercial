@@ -21,6 +21,8 @@ import com.ytmall.util.FragmentView;
 import com.ytmall.util.InjectView;
 import com.ytmall.widget.BottomPopWindow;
 
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.UUID;
@@ -79,6 +81,8 @@ public class BankFragment extends BaseFragment implements View.OnClickListener ,
     private TextView path_load;
 
     private int type = 0 ;
+
+    private String path ;
     @Override
     public void bindDataForUIElement() {
         tWidget.setCenterViewText("线下转账");
@@ -117,7 +121,7 @@ public class BankFragment extends BaseFragment implements View.OnClickListener ,
             String accout_num_str = accout_num.getText().toString();
             bankBean.transfer_sn = account_from.getText().toString();
             String back_score_str = back_score.getText().toString();
-            bankBean.image = path_load.getText().toString();
+            bankBean.image = path;
             bankBean.type = "1";
 
             if (TextUtils.isEmpty(bankBean.bank_name)) {
@@ -176,8 +180,16 @@ public class BankFragment extends BaseFragment implements View.OnClickListener ,
     @Override
     protected void requestSuccess(String url, String data) {
         super.requestSuccess(url, data);
-        if(url.contains("")){
-
+        if(url.contains("uploadPic")){
+            try {
+                JSONObject jsonobj = new JSONObject(data);
+                jsonobj = jsonobj.getJSONObject("Filedata");
+                path = jsonobj.getString("savepath") + jsonobj.getString("savename");
+                path_load.setText(path);
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
+            return;
         }
         getActivity().finish();
         Toast.makeText(getActivity(),"上传成功",Toast.LENGTH_LONG).show();

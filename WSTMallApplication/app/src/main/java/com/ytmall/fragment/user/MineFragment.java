@@ -276,10 +276,10 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                     glod_bank_info_1.setText("金堂宝 ￥" + Const.user.jinMoney);
                 }
                 if(Const.user.yinMoney != null){
-                    silver_bank_info_1.setText("银堂宝 ￥" + Const.user.jinMoney);
+                    silver_bank_info_1.setText("银堂宝 ￥" + Const.user.yinMoney);
                 }
                 if(Const.user.lockJinMoney != null){
-                    silver_bank_info_2.setText("每日从银堂宝返金堂宝比例 " + Const.user.jinMoney);
+                    silver_bank_info_2.setText("上一天单元转换堂宝数 | " + Const.user.lockJinMoney);
                 }
 
             } catch (JSONException e) {

@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.pay.AlipayPayActivity;
 import com.ytmall.R;
 import com.ytmall.activity.recharge.RechargeToPay;
 import com.ytmall.activity.wechat.WeChatPayActivity;
@@ -89,6 +90,12 @@ public class RechargeOrderFragment extends BaseFragment implements View.OnClickL
                             ("orderId", rechargeId).putExtra("from", "RechargeOrderFragment"));
                 }else{
                     //支付宝支付
+                    Intent intent = new Intent(getActivity(), AlipayPayActivity.class);
+                    intent.putExtra("SUBJECT","哪位的账户");
+                    intent.putExtra("DESC","商品描述");
+                    intent.putExtra("ORDER_NO",rechargeId);
+                    intent.putExtra("PAY_PRICE",money);
+                    startActivity(intent);
                 }
 
 //                rechargeToPay();

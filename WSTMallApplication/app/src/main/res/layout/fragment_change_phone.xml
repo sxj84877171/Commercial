@@ -41,6 +41,7 @@
             android:layout_marginTop="20dp"
             android:background="@color/transparent"
             android:hint="请输入验证码"
+            android:maxLength="6"
             android:inputType="number"
             android:padding="10dp" />
 
@@ -63,13 +64,14 @@
         android:orientation="horizontal" />
 
     <Button
+        android:id="@+id/submit_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:padding="10dp"
-        android:text="绑定"
-        android:background="@color/red"
+        android:text="绑  定"
+        android:background="@drawable/btn_login_bg"
         android:textColor="@color/white" />
 
 
