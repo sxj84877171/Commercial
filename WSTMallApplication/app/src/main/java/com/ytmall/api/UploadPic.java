@@ -33,6 +33,7 @@ public class UploadPic extends AbstractParam{
 	public File Filedata;//照片对象
 	public String dir="users";//照片目录 “users”--必须传这个过来 testa
 
+
 	@Override
 	public String getA() {
 		return a;

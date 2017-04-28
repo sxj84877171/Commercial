@@ -4,11 +4,11 @@
     <string name="app_name">云堂商城</string>
     <string name="action_settings">Settings</string>
 
-    
-        <!-- net info -->
+
+    <!-- net info -->
     <string name="net_error">网络错误!</string>
     <string name="loading_more_data">正在加载更多数据</string>
-    
+
     <!-- 扫描二维码 -->
     <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
     <!-- 图片浏览 -->
@@ -64,4 +64,7 @@
     <string name="soft_update_later">稍后更新</string>
     <string name="soft_updating">正在更新</string>
     <string name="soft_update_cancel">取消</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

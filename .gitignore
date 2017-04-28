@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+/WSTMallApplication/.gradle
+/WSTMallApplication/.idea
+/WSTMallApplication/build
+/WSTMallApplication/HandMark/build
+/WSTMallApplication/HandMark/gen
+/WSTMallApplication/library/build
+/WSTMallApplication/rxpremissions/build
+/WSTMallApplication/HandMark/bin

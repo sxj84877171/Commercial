@@ -214,6 +214,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.recharge.RechargeActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.silver.SilverActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".activity.shop.MyShopActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.shop.ShopManageActivity"

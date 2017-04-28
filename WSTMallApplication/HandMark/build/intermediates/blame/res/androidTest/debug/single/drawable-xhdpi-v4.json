@@ -8,19 +8,31 @@
         "source": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
     },
     {
-        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
-        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
-    },
-    {
         "merged": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
         "source": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
+        "source": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
+    },
+    {
+        "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
+        "source": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
+    },
+    {
+        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
+        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
+    },
+    {
+        "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
+        "source": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
     },
     {
         "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",
         "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\indicator_arrow.png"
     },
     {
-        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flip.png",
-        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flip.png"
+        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
+        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
     }
 ]

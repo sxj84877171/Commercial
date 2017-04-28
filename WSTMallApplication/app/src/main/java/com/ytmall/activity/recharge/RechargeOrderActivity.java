@@ -16,6 +16,7 @@ public class RechargeOrderActivity extends BaseActivity {
         String money = getIntent().getStringExtra("money");
         String orderNo = getIntent().getStringExtra("orderNo");
         String rechargeId = getIntent().getStringExtra("rechargeId");
-        replaceFragment(new RechargeOrderFragment(money,orderNo,rechargeId),false);
+        int type = getIntent().getIntExtra("type", -1);
+        replaceFragment(new RechargeOrderFragment(money,orderNo,rechargeId,type),false);
     }
 }

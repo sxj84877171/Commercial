@@ -32,14 +32,15 @@ public class RechargeOrderFragment extends BaseFragment implements View.OnClickL
     private String money;
     private String orderNo;
     private String rechargeId;
+    private int type = -1;
 
     private RechargeToPay payParam ;
 
-    public RechargeOrderFragment(String money,String orderNo,String rechargeId){
+    public RechargeOrderFragment(String money,String orderNo,String rechargeId,int type){
         this.money = money;
         this.orderNo = orderNo;
         this.rechargeId = rechargeId;
-
+        this.type = type ;
     }
 
     @Override
@@ -71,6 +72,11 @@ public class RechargeOrderFragment extends BaseFragment implements View.OnClickL
         txtOrderMoney.setText(money);
 
         btnWeixinPay.setOnClickListener(this);
+        if(type == 1){
+            btnWeixinPay.setText("支付宝支付");
+        }else{
+            btnWeixinPay.setText("微信支付");
+        }
 
     }
 
@@ -78,8 +84,12 @@ public class RechargeOrderFragment extends BaseFragment implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnWeixinPay:
-                startActivity(new Intent(getActivity(), WeChatPayActivity.class).putExtra
-                        ("orderId",rechargeId).putExtra("from","RechargeOrderFragment"));
+                if(type == 0) {
+                    startActivity(new Intent(getActivity(), WeChatPayActivity.class).putExtra
+                            ("orderId", rechargeId).putExtra("from", "RechargeOrderFragment"));
+                }else{
+                    //支付宝支付
+                }
 
 //                rechargeToPay();
                 break;

@@ -9,9 +9,10 @@ import com.ytmall.util.http.RequestType;
  */
 @RequestType(type = HttpMethod.POST)
 public class UpdatePhone extends AbstractParam {
-    public String a = "updatePhone";
+    public String a = "bindPhone";
     public String tokenId;
     public String userPhone;
+    public String phoneCode;
 
     @Override
     public String getA() {

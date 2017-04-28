@@ -1,30 +1,5 @@
 package com.ytmall.fragment;
 
-import java.lang.reflect.Field;
-
-import org.apache.http.Header;
-import org.json.JSONObject;
-
-import com.google.gson.Gson;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.RequestParams;
-import com.loopj.android.http.TextHttpResponseHandler;
-import com.tbruyelle.rxpermissions.RxPermissions;
-import com.ytmall.R;
-import com.ytmall.activity.BaseActivity;
-import com.ytmall.application.Const;
-import com.ytmall.application.WSTMallApplication;
-import com.ytmall.bean.AbstractParam;
-import com.ytmall.fragment.user.ShippingAdressFragment;
-import com.ytmall.util.FragmentView;
-import com.ytmall.util.InjectView;
-import com.ytmall.util.JSONTool;
-import com.ytmall.util.http.HttpMethod;
-import com.ytmall.util.http.RequestType;
-import com.ytmall.widget.BottomPopWindow;
-import com.ytmall.widget.LoadingDialog;
-import com.ytmall.widget.TitleWidget;
-
 import android.app.Fragment;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -37,6 +12,29 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.RequestParams;
+import com.loopj.android.http.TextHttpResponseHandler;
+import com.ytmall.R;
+import com.ytmall.activity.BaseActivity;
+import com.ytmall.application.Const;
+import com.ytmall.application.WSTMallApplication;
+import com.ytmall.bean.AbstractParam;
+import com.ytmall.util.FragmentView;
+import com.ytmall.util.InjectView;
+import com.ytmall.util.JSONTool;
+import com.ytmall.util.http.HttpMethod;
+import com.ytmall.util.http.RequestType;
+import com.ytmall.widget.BottomPopWindow;
+import com.ytmall.widget.LoadingDialog;
+import com.ytmall.widget.TitleWidget;
+
+import org.apache.http.Header;
+import org.json.JSONObject;
+
+import java.lang.reflect.Field;
 
 
 public abstract class BaseFragment extends Fragment implements TitleWidget.IOnClick {

@@ -113,8 +113,6 @@ public class RechargeFragment extends BaseFragment implements View.OnClickListen
         request(param);
 
 
-
-
     }
 
 

@@ -380,7 +380,8 @@
                     android:padding="10dp"
                     android:text="卡充值"
                     android:textColor="@color/center_bottom"
-                    android:textSize="@dimen/txt_normal" />
+                    android:textSize="@dimen/txt_normal"
+                    android:visibility="gone" />
 
                 <View
                     android:layout_width="1dp"
@@ -388,7 +389,8 @@
                     android:background="@color/classify_normal"
                     android:gravity="center_vertical"
                     android:paddingBottom="5dp"
-                    android:paddingTop="5dp" />
+                    android:paddingTop="5dp"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/rl_share"
@@ -416,11 +418,25 @@
                 <TextView
                     android:id="@+id/silver_bank_info_1"
                     android:layout_width="match_parent"
-                    android:padding="10dp"
-                    android:gravity="center_vertical"
                     android:layout_height="50dp"
-                    android:textStyle="bold"
-                    android:text="银堂宝 ￥0.00  | 金堂宝 ￥0.00" />
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="银堂宝 ￥0.00"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/glod_bank_info_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="金堂宝 ￥0.00"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -430,11 +446,11 @@
                 <TextView
                     android:id="@+id/silver_bank_info_2"
                     android:layout_width="match_parent"
-                    android:padding="10dp"
-                    android:gravity="center_vertical"
-                    android:textStyle="bold"
                     android:layout_height="50dp"
-                    android:text="每日从银堂宝返金堂宝比例 0.04%" />
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="每日从银堂宝返金堂宝比例 0.00%"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -475,10 +491,12 @@
                         android:layout_marginRight="10dp"
                         android:background="@drawable/arrow_right" />
                 </RelativeLayout>
+
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/line"></LinearLayout>
+
                 <RelativeLayout
                     android:id="@+id/bank_charge"
                     android:layout_width="fill_parent"
@@ -600,7 +618,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="40dp"
-                        android:text="商家提现" />
+                        android:text="提现至银行卡" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -794,7 +812,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="40dp"
-                        android:text="资金管理" />
+                        android:text="提现至余额" />
 
                     <ImageView
                         android:layout_width="wrap_content"

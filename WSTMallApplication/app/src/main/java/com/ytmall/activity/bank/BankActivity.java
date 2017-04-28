@@ -3,7 +3,6 @@ package com.ytmall.activity.bank;
 import android.os.Bundle;
 
 import com.ytmall.activity.BaseActivity;
-import com.ytmall.fragment.order.OrderManagement;
 
 /**
  * WSTMallApplication
@@ -20,21 +19,25 @@ import com.ytmall.fragment.order.OrderManagement;
  */
 
 public class BankActivity extends BaseActivity {
-    public static boolean isNeedRefresh=false;
+    public static boolean isNeedRefresh = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        replaceFragment(new BankFragment(), false);
+        BankFragment bankFragment = new BankFragment();
+        replaceFragment(bankFragment, false);
     }
 
     @Override
     protected void onRestart() {
         // TODO Auto-generated method stub
         super.onRestart();
-        if(isNeedRefresh) {
-            replaceFragment(new BankFragment(), false);
-            isNeedRefresh=false;
+        if (isNeedRefresh) {
+            BankFragment bankFragment = new BankFragment();
+            replaceFragment(bankFragment, false);
+            isNeedRefresh = false;
         }
 
     }
+
 }

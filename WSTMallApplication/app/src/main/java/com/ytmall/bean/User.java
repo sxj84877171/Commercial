@@ -52,6 +52,9 @@ public class User implements Serializable {
 	public String userPhone;
 	public String recommend_user;//我的好友
 	public int is_super_user;//0普通会员1高级会员
+	public String jinMoney;
+	public String yinMoney;
+	public String lockJinMoney;
 
 	public int user_source = -1;
 	public String user_link_account;

@@ -162,13 +162,13 @@ public class EditUserInfoFragment extends BaseFragment implements View.OnClickLi
 		switch (position) {
 		case 0:
 			if (MainActivity.getCaramePermission()){
-				((MineActivity)getActivity()).startCamera();
+				((MineActivity)getActivity()).startCamera(MineActivity.CAMERA_PHOTO);
 			}
 
 			break;
 		case 1:
 			if (MainActivity.getWritePermission()){
-				((MineActivity)getActivity()).startSelectPhoto();
+				((MineActivity)getActivity()).startSelectPhoto(MineActivity.CHOOSE_ALBUM);
 			}
 
 			break;

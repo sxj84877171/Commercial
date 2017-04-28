@@ -73,7 +73,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/login_name"
+                android:id="@+id/use_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入户名"
@@ -114,9 +114,10 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/user_name"
+                android:id="@+id/card_no"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:hint="银行卡号或支付宝账号"
                 android:textColor="@color/grey_hint_text"
                 android:textSize="@dimen/text_size_large" />
@@ -155,10 +156,11 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/sex"
+                android:id="@+id/accout_num"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入转账金额"
+                android:inputType="number"
                 android:textColor="@color/grey_hint_text"
                 android:textSize="@dimen/text_size_large" />
 
@@ -201,6 +203,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入流水号"
+                android:inputType="number"
                 android:textColor="@color/grey_hint_text"
                 android:textSize="@dimen/text_size_large" />
 
@@ -233,15 +236,18 @@
             android:textSize="@dimen/text_size_large" />
 
         <RelativeLayout
+            android:id="@+id/choose_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
             android:orientation="horizontal">
 
-            <EditText
+            <TextView
                 android:id="@+id/back_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="商城充值"
+                android:padding="10dp"
                 android:textColor="@color/grey_hint_text"
                 android:textSize="@dimen/text_size_large" />
 
@@ -274,15 +280,17 @@
             android:textSize="@dimen/text_size_large" />
 
         <RelativeLayout
+            android:id="@+id/back_score_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/back_score_phone"
+                android:id="@+id/path_load"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:text="未选择任何文件"
                 android:textColor="@color/grey_hint_text"
                 android:textSize="@dimen/text_size_large" />
@@ -291,6 +299,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/arrow_right" />
 
@@ -307,10 +316,11 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/submit_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@color/red"
+            android:background="@drawable/btn_login_bg"
             android:text="确定"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_large" />

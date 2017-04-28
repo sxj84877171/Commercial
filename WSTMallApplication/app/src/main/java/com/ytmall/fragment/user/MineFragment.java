@@ -45,6 +45,7 @@ import com.ytmall.activity.recharge.RechargeActivity;
 import com.ytmall.activity.share.ShareActivity;
 import com.ytmall.activity.shop.MyShopActivity;
 import com.ytmall.activity.shop.ShopOrderManageActivity;
+import com.ytmall.activity.silver.SilverActivity;
 import com.ytmall.activity.user.MineActivity;
 import com.ytmall.activity.user.UpdateUserActivity;
 import com.ytmall.api.login.GetUserInfo;
@@ -118,6 +119,10 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     //充值
     @InjectView(id = R.id.rl_recharge)
     private TextView rl_recharge;
+
+    @InjectView(id = R.id.rl_bank_charge)
+    private TextView rl_bank_charge;
+
     @InjectView(id = R.id.view1)
     private View view1;
     //店铺管理
@@ -189,6 +194,13 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     RelativeLayout rl_about;
     @InjectView(id = R.id.rl_card_recharge)
     TextView rl_card_recharge;
+
+    @InjectView(id=R.id.glod_bank_info_1)
+    private TextView glod_bank_info_1;
+    @InjectView(id=R.id.silver_bank_info_1)
+    private TextView silver_bank_info_1 ;
+    @InjectView(id=R.id.silver_bank_info_2)
+    private TextView silver_bank_info_2 ;
     /**商城消息数量*/
     private String messageCount;
     private GetOrdersStatus getOrdersStatus = new GetOrdersStatus();
@@ -260,8 +272,19 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                     rl_shop_manage.setVisibility(View.GONE);
                     rl_shop_take_money.setVisibility(View.GONE);
                 }
+                if(Const.user.jinMoney != null){
+                    glod_bank_info_1.setText("金堂宝 ￥" + Const.user.jinMoney);
+                }
+                if(Const.user.yinMoney != null){
+                    silver_bank_info_1.setText("银堂宝 ￥" + Const.user.jinMoney);
+                }
+                if(Const.user.lockJinMoney != null){
+                    silver_bank_info_2.setText("每日从银堂宝返金堂宝比例 " + Const.user.jinMoney);
+                }
 
             } catch (JSONException e) {
+            }finally {
+
             }
         }else if (url.contains(versionparam.getA())){
             try {
@@ -284,6 +307,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
 
         }
     }
+
     /**
      * 获取软件版本号
      *
@@ -364,6 +388,10 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 Intent rechargeIntent = new Intent(getActivity(), RechargeActivity.class);
                 startActivity(rechargeIntent);
                 break;
+            case R.id.rl_bank_charge:
+                Intent rlBankIntent = new Intent(getActivity(),SilverActivity.class);
+                startActivity(rlBankIntent);
+                break;
             case R.id.ll_way_accept:
                 Intent acIntent = new Intent(getActivity(), OrderActivity.class);
                 acIntent.putExtra("orderType", 2);
@@ -440,6 +468,8 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
 //        versionparam.tokenId = Const.cache.getTokenId();
         request(versionparam);
 
+
+
     }
 
     private void initOrderTips() {
@@ -459,6 +489,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
         rl_favorite.setOnClickListener(this);
 
         rl_recharge.setOnClickListener(this);
+        rl_bank_charge.setOnClickListener(this);
         rl_card_recharge.setOnClickListener(this);
         tv_personcount.setOnClickListener(this);
 
