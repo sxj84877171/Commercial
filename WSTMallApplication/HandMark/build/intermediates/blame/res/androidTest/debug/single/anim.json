@@ -1,66 +1,18 @@
 [
     {
-        "merged": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
-        "source": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
-    },
-    {
-        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
-        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
-    },
-    {
         "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
         "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
-    },
-    {
-        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
-        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
-    },
-    {
-        "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
-        "source": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
-    },
-    {
-        "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
-        "source": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
-    },
-    {
-        "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
-        "source": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
     },
     {
         "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
         "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
     },
     {
-        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
-        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
-    },
-    {
         "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
         "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
     },
     {
-        "merged": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
-        "source": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
-    },
-    {
-        "merged": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
-        "source": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
-    },
-    {
-        "merged": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
-        "source": "E:\\workspace\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
-    },
-    {
         "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
         "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
-    },
-    {
-        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
-        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
-    },
-    {
-        "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
-        "source": "E:\\workspace\\Commercial\\WSTMallApplication\\HandMark\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
     }
 ]

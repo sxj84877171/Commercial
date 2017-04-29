@@ -164,7 +164,7 @@ public class ShopMoneyManageFragment extends BaseFragment implements View.OnClic
 
                 break;
             case R.id.btnTakeMoney:
-                Intent i = new Intent(getActivity(), ShopTakeMoneyActivity.class);
+                Intent i = new Intent(getActivity(), CheckPhoneActivity.class);//ShopTakeMoneyActivity
                 startActivity(i);
 
 

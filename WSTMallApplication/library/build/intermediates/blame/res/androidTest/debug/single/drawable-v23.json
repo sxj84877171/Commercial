@@ -1,18 +1,6 @@
 [
     {
-        "merged": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v23\\abc_control_background_material.xml",
-        "source": "E:\\Users\\lee\\Downloads\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-v23\\abc_control_background_material.xml"
-    },
-    {
         "merged": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v23\\abc_control_background_material.xml",
         "source": "E:\\workspace\\Commercial\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-v23\\abc_control_background_material.xml"
-    },
-    {
-        "merged": "E:\\workspace\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v23\\abc_control_background_material.xml",
-        "source": "E:\\workspace\\Commercial\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-v23\\abc_control_background_material.xml"
-    },
-    {
-        "merged": "E:\\workspace\\WSTMallApplication\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v23\\abc_control_background_material.xml",
-        "source": "E:\\workspace\\WSTMallApplication\\library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-v23\\abc_control_background_material.xml"
     }
 ]
