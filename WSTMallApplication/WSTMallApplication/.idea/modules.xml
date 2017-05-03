@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HandMark/HandMark.iml" filepath="$PROJECT_DIR$/HandMark/HandMark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WSTMallApplication.iml" filepath="$PROJECT_DIR$/WSTMallApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxpremissions/rxpremissions.iml" filepath="$PROJECT_DIR$/rxpremissions/rxpremissions.iml" />
+    </modules>
+  </component>
+</project>

@@ -13,6 +13,7 @@ public class DrawsCashByShop extends AbstractParam {
     public String tokenId;
     public String configId;
     public String drawMoney;
+    public String type;
 
     @Override
     public String getA() {

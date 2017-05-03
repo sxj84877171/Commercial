@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="86dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cb_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"           
+            android:focusable="false"
+            android:button="@drawable/checkbox_selector" />
+
+        <LinearLayout
+            android:id="@+id/ll_spc_good_item"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/im_shppingcar_godsimg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥"
+                            android:textColor="#23ADAA" />
+
+                        <TextView
+                            android:id="@+id/tv_shoppingcar_goods_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10"
+                            android:textColor="#23ADAA" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_shoppingcar_goods_describe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/ll_price"
+                        android:ellipsize="end"
+                        android:lines="3"
+                        android:text="奶茶奶茶奶茶" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/guige"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="库存:"
+                        android:textColor="#747474"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_shoppingcar_goods_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/guige"
+                        android:layout_centerVertical="true"
+                        android:text="34"
+                        android:textColor="#747474" />
+                    <TextView 
+						    android:id="@+id/tv_goods_attrs"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:layout_toRightOf="@id/tv_shoppingcar_goods_count"
+						    android:layout_marginLeft="12dp"
+						    android:textColor="@color/app_bg"
+                            android:layout_centerVertical="true"
+						    />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@color/grey_light"
+                            >
+
+                            <TextView
+                                android:id="@+id/minus_buy_button"
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/grey_hint_text"
+                                android:textSize="16sp"
+                                 />
+
+                            <EditText
+                                android:id="@+id/buy_num_edittext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="1dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:singleLine="true"
+                                android:text="441"
+                                android:textSize="10sp"
+                                android:textColor="@color/black"
+                                 />
+
+                            <TextView
+                                android:id="@+id/add_buy_button"
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/grey_hint_text"
+                                android:textSize="16sp"
+                                 />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_shoppingcar_goods_count_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="34"
+                            android:textColor="#747474"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

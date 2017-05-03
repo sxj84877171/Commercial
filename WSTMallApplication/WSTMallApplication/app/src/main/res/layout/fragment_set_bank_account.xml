@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:showu="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llBankAccount">
+    <com.ytmall.widget.TitleWidget
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        showu:center_view_text="商家提现"
+        showu:left_visibility="visible"
+        showu:right_visibility="invisible"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账户类型"
+            android:padding="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/llBankType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/bg_card_recharge"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txtBankType"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_normal"
+                    android:text="请选择"
+                    android:textColor="@color/center_bottom"/>
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/arrow_down"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开户地址"
+            android:padding="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/llProvince"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/bg_card_recharge"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txtProvince"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_normal"
+                    android:text="请选择"
+                    android:textColor="@color/center_bottom"/>
+                <ImageView
+                    android:id="@+id/imgType"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/arrow_down"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/bg_card_recharge"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txtCity"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/txt_normal"
+                    android:text="请选择"
+                    android:textColor="@color/center_bottom"/>
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/arrow_down"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开户支行"
+            android:textSize="@dimen/txt_normal"
+            />
+        <EditText
+            android:id="@+id/etBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card_recharge"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="30dp"
+            android:padding="5dp"
+            android:hint="提现金额大于5万必须填"
+            android:textSize="@dimen/txt_normal"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="持卡人"
+            android:textSize="@dimen/txt_normal"
+            />
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card_recharge"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="30dp"
+            android:padding="5dp"
+            android:textSize="@dimen/txt_normal"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卡号"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/txt_normal"
+            />
+        <EditText
+            android:id="@+id/etNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card_recharge"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="30dp"
+            android:padding="5dp"
+            android:textSize="@dimen/txt_normal"/>
+
+
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnSure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_login_bg"
+        android:layout_margin="30dp"
+        android:text="确 定"
+        android:textSize="@dimen/txt_normal"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>

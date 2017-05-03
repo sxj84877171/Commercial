@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+android {
+//    compileSdkVersion 23
+//    buildToolsVersion "23.0.1"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.ytmall"
+        minSdkVersion 15
+//        targetSdkVersion 23
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1060
+        versionName "1.5.9"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+//            proguardFiles 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('ytmall.jks')
+            storePassword "11061127"
+            keyAlias "ytmal"
+            keyPassword "11061127"
+        }
+
+        release {
+            storeFile file('ytmall.jks')
+            storePassword "11061127"
+            keyAlias "ytmal"
+            keyPassword "11061127"
+        }
+
+        productFlavors {
+        }
+        lintOptions {
+            abortOnError false
+            checkReleaseBuilds false
+            // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+            disable 'MissingTranslation'
+        }
+    }
+
+
+    dependencies {
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+        testCompile 'junit:junit:4.12'
+        compile 'com.android.support:appcompat-v7:23.1.0'
+        compile 'com.android.support:design:23.1.0'
+
+        //     compile 'com.android.support:support-v4-23.1.0'
+        //    compile files('libs/AMap_3DMap_v2.6.0_20150914.jar')
+        //    compile files('libs/AMap_Search_v2.6.0_20150914.jar')
+        compile files('libs/android-async-http-1.4.6.jar')
+        compile files('libs/gson-2.2.4.jar')
+        //    compile files('libs/httpmime-4.2.4.jar')
+        compile files('libs/testinagent.jar')
+        compile files('libs/universal-image-loader-1.9.4.jar')
+        //    compile files('libs/httpclient-android-4.3.5.1.jar')
+        compile project(':HandMark')
+        compile files('libs/httpcore-4.4.4.jar')
+        compile files('libs/AMap_Location_V3.1.0_20161027.jar')
+        //    compile files('libs/libammsdk.jar')
+        compile files('libs/core-3.0.0.jar')
+        compile project(':library')
+        //    compile files('libs/libapshare.jar')
+        compile files('libs/SocialSDK_WeiXin_1.jar')
+        compile files('libs/SocialSDK_WeiXin_2.jar')
+        compile files('libs/umeng_social_api.jar')
+        compile files('libs/umeng_social_net.jar')
+        compile files('libs/alipaySdk-20160803.jar')
+        compile files('libs/umeng_social_view.jar')
+        compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    }
+}
+dependencies {
+    compile project(':rxpremissions')
+}

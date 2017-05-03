@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:showu="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.ytmall.widget.TitleWidget
+            android:id="@id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            showu:center_view_text="充值"
+            showu:left_visibility="visible"
+            showu:right_visibility="visible" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_recharge_use"
+                android:textColor="@color/txt_select"
+                android:textSize="@dimen/txt_normal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_select"
+                android:textSize="@dimen/txt_bigest"
+                android:text="100.00"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"/>
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/et_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入充值金额"
+            android:textSize="@dimen/txt_normal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:inputType="numberDecimal"
+            android:textColor="@color/center_bottom"
+            android:background="@drawable/round_white_bg"/>
+        <EditText
+            android:id="@+id/et_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入充值备注"
+            android:textSize="@dimen/txt_normal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:background="@drawable/round_white_bg"
+            android:textColor="@color/center_bottom"/>
+
+        <RelativeLayout
+            android:id="@+id/choose_pay"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_white_bg">
+
+            <TextView
+                android:id="@+id/pay_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="支付方式：" />
+
+            <TextView
+                android:id="@+id/pay_type_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/pay_type"
+                android:text="微信支付" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/arrow_right" />
+
+
+        </RelativeLayout>
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:text="@string/txt_recharge_choose"-->
+            <!--android:textSize="@dimen/txt_big_normal"-->
+            <!--android:textColor="@color/center_bottom" />-->
+        <!--<com.lingxiang.ytmall.weight.GridviewForScroll-->
+            <!--android:id="@+id/gridMoney"-->
+            <!--android:numColumns="4"-->
+            <!--android:verticalSpacing="15dp"-->
+            <!--android:horizontalSpacing="12dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"/>-->
+        <Button
+            android:id="@+id/btn_recharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_login_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_big"
+            android:text="@string/btn_recharge"
+            android:layout_marginTop="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_middle_normal"
+            android:textColor="@color/center_bottom"
+            android:text="@string/notice_title"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_small"
+            android:textColor="@color/edit_txt"
+            android:text="@string/notice_content"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4sp"/>
+
+    </LinearLayout>
+
+
+</ScrollView>

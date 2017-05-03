@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/llUserBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <CheckBox
+            android:id="@+id/cbUserBalance"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/checkbox_selector"
+            android:button="@null"/>
+        <TextView
+            android:id="@+id/txtUserMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用余额支付"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/text_size_medium"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llPayPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_below="@+id/llUserBalance">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付密码："
+            android:textColor="@color/center_bottom"
+            android:textSize="@dimen/text_size_medium"/>
+        <EditText
+            android:id="@+id/etPwd"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_white_bg"
+            android:inputType="numberPassword"
+            android:textSize="@dimen/text_size_medium" />
+        <TextView
+            android:id="@+id/txtChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/center_bottom"
+            android:textSize="@dimen/text_size_medium"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

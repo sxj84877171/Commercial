@@ -14,6 +14,43 @@
         showu:left_visibility="visible"
         showu:right_visibility="invisible" />
 
+    <RelativeLayout
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_white_bg">
+
+        <TextView
+            android:id="@+id/pay_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="类型" />
+
+        <TextView
+            android:id="@+id/pay_type_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/pay_type"
+            android:textColor="@color/red"
+            android:text="金堂宝可转入可用金额" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrow_right" />
+
+
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,10 +95,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="最低提现金额为1元，只能提现到可用余额"
-        android:textColor="@color/txt_old_pwd"
+        android:text="提现提醒：\r\n最低提现金额为1元，只能提现到可用余额\r\n堂宝转入可用余额不收取手续费\r\n金堂宝转入可用余额收取8%的手续费"
+        android:textColor="@color/red"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
         android:textSize="@dimen/txt_normal"/>
 
 

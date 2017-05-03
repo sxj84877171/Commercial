@@ -10,8 +10,45 @@
         android:id="@id/titleBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        showu:center_view_text="商家提现"
+        showu:center_view_text="店铺提现"
         showu:left_visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/choose_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/pay_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/txt_normal"
+            android:textColor="@color/center_bottom"
+            android:padding="10dp"
+            android:text="账户" />
+
+        <TextView
+            android:id="@+id/pay_type_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/pay_type"
+            android:text="商家账户" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/arrow_right" />
+
+
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/llBank"
         android:layout_width="match_parent"
@@ -85,10 +122,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="最低提现金额为1元，只能提现到可用余额"
+        android:text="提现提醒：\r\n提现申请处理后第三个工作日到账\r\n最低体现金额为1远，每天最多提现15万元\r\n金堂宝提现至银行卡收取15%的手续费"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/txt_old_pwd"
+        android:layout_marginTop="30dp"
+
+        android:textColor="@color/red"
         android:textSize="@dimen/txt_normal"/>
 
 

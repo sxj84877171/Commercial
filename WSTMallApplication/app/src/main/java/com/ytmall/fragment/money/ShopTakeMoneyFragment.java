@@ -1,6 +1,8 @@
 package com.ytmall.fragment.money;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -43,12 +45,19 @@ public class ShopTakeMoneyFragment extends BaseFragment implements View.OnClickL
     @InjectView(id = R.id.btnSure)
     Button btnSure;
 
+    @InjectView(id = R.id.pay_type_name)
+    TextView pay_type_name;
+    @InjectView(id = R.id.choose_pay)
+    View choose_pay;
+
     private DrawsCashByShop shopParam = new DrawsCashByShop();
     private PayPwdPopWindow payPop;
     private CheckPayPwd pwdParam;
+
+    private int type;
     @Override
     protected void bindEvent() {
-
+        choose_pay.setOnClickListener(this);
     }
 
     @Override
@@ -143,6 +152,22 @@ public class ShopTakeMoneyFragment extends BaseFragment implements View.OnClickL
                 Intent i = new Intent(getActivity(), BankAccountActivity.class);
                 startActivity(i);
                 break;
+            case R.id.choose_pay:
+            {
+                new AlertDialog.Builder(getActivity()).setSingleChoiceItems(new String[]{"商家账户", "金堂宝"}, type, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        type = which;
+                        if (which == 0) {
+                            pay_type_name.setText("商家账户");
+                        } else {
+                            pay_type_name.setText("金堂宝");
+                        }
+                        dialog.dismiss();
+                    }
+                }).show();
+                break;
+            }
         }
     }
 
@@ -154,6 +179,14 @@ public class ShopTakeMoneyFragment extends BaseFragment implements View.OnClickL
             shopParam.configId = Const.cache.getBankAcc().id;
         }else {
             Toast.makeText(getActivity(),"请选择提现账户",Toast.LENGTH_SHORT).show();
+        }
+
+        if(type == 0){
+            shopParam.a = "drawsCashByShop";
+
+        }else{
+            shopParam.a = "jinMoneyToBank";
+            shopParam.type = "1" ;
         }
 
         request(shopParam);
