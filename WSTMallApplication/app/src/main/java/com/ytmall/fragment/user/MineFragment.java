@@ -57,6 +57,7 @@ import com.ytmall.api.version.VersionCheckReturn;
 import com.ytmall.application.Const;
 import com.ytmall.bean.User;
 import com.ytmall.bean.UserSoreBean;
+import com.ytmall.bean.YinToJin;
 import com.ytmall.fragment.BaseFragment;
 import com.ytmall.fragment.login.LoginFragment;
 import com.ytmall.fragment.order.GetOrderComplainListFragment;
@@ -195,18 +196,21 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     @InjectView(id = R.id.rl_card_recharge)
     TextView rl_card_recharge;
 
-    @InjectView(id=R.id.glod_bank_info_1)
+    @InjectView(id = R.id.glod_bank_info_1)
     private TextView glod_bank_info_1;
 
-    @InjectView(id=R.id.glod_bank_info_3)
+    @InjectView(id = R.id.glod_bank_info_3)
     private TextView glod_bank_info_3;
-    @InjectView(id=R.id.silver_bank_info_2)
-    private TextView silver_bank_info_2 ;
-    /**商城消息数量*/
+    @InjectView(id = R.id.silver_bank_info_2)
+    private TextView silver_bank_info_2;
+    /**
+     * 商城消息数量
+     */
     private String messageCount;
     private GetOrdersStatus getOrdersStatus = new GetOrdersStatus();
     private Message messageApi = new Message();
     private VersionCheckParam versionparam = new VersionCheckParam();
+    private YinToJin yinToJin = new YinToJin();
     //积分 API
     private GetUserInfo getUserInfo = new GetUserInfo();
 //    private RxPermissions rxPermissions;
@@ -238,7 +242,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 tv_message_count.setText(messageCount + "");
             } catch (JSONException e) {
                 e.printStackTrace();
-            }finally {
+            } finally {
                 GetUserInfo();
             }
         } else if (url.contains(getUserInfo.getA())) {
@@ -248,65 +252,71 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 Const.user = gson.fromJson(jsonobj.get("data").toString(), User.class);
                 MineActivity.autoToMine = true;
                 Const.isLogin = true;
-                if (Const.user.is_super_user == 0){
+                if (Const.user.is_super_user == 0) {
                     tv_person_points.setText("普通会员");
                     tv_personcount.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     tv_person_points.setText("经销商");
                     tv_personcount.setVisibility(View.GONE);
                 }
 //                tv_person_points.setText(Const.user.userScore);
-                txtUserMoney.setText("我的金额："+Const.user.userMoney);
-                txtLockMoney.setText("冻结金额："+Const.user.lockMoney);
-                if (Const.user.hasShop == 1){
+                txtUserMoney.setText("我的金额：" + Const.user.userMoney);
+                txtLockMoney.setText("冻结金额：" + Const.user.lockMoney);
+                if (Const.user.hasShop == 1) {
                     llShopMoney.setVisibility(View.VISIBLE);
-                    txtShopMoney.setText("店铺销售金额："+Const.user.shopMoney);
-                    txtShopLockMoney.setText("店铺冻结金额："+Const.user.shopLockMoney);
+                    txtShopMoney.setText("店铺销售金额：" + Const.user.shopMoney);
+                    txtShopLockMoney.setText("店铺冻结金额：" + Const.user.shopLockMoney);
                     txtShopLockMoney.setVisibility(View.GONE);
 
                     get_money_code.setVisibility(View.VISIBLE);
 
                     rl_shop_manage.setVisibility(View.VISIBLE);
                     rl_shop_take_money.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     llShopMoney.setVisibility(View.GONE);
                     get_money_code.setVisibility(View.GONE);
                     rl_shop_manage.setVisibility(View.GONE);
                     rl_shop_take_money.setVisibility(View.GONE);
                 }
-                if(Const.user.jinMoney != null){
-                    glod_bank_info_1.setText("" + Const.user.jinMoney);
+                if (Const.user.jinMoney != null) {
+                    glod_bank_info_3.setText("" + Const.user.jinMoney);
                 }
-                if(Const.user.yinMoney != null){
-                    glod_bank_info_3.setText("" + Const.user.yinMoney);
+                if (Const.user.yinMoney != null) {
+                    glod_bank_info_1.setText("" + Const.user.yinMoney);
                 }
-                if(Const.user.lockJinMoney != null){
-                    silver_bank_info_2.setText("上一天单元转换堂宝数 | " + Const.user.lockJinMoney);
-                }
+//                yinToJin.tokenId = Const.cache.getTokenId();
+                request(yinToJin);
 
             } catch (JSONException e) {
-            }finally {
+            } finally {
 
             }
-        }else if (url.contains(versionparam.getA())){
+        } else if (url.contains(versionparam.getA())) {
             try {
                 JSONObject jso = new JSONObject(data);
-                VersionCheckReturn result = gson.fromJson(jso.get("data").toString(),VersionCheckReturn.class);
+                VersionCheckReturn result = gson.fromJson(jso.get("data").toString(), VersionCheckReturn.class);
                 int versionCode = getVersionCode(getActivity());
 //                Toast.makeText(getActivity(),"线上"+result.app_version+"，"+"本地"+versionCode,Toast.LENGTH_SHORT).show();
-                if (result.app_version > versionCode){
+                if (result.app_version > versionCode) {
                     UpdateManager manager = new UpdateManager(getActivity());
                     manager.checkUpdate(result.download_url);
 //                    upData(result.download_url);
-                }else {
-                    Toast.makeText(getActivity(),"已经是最新版本",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getActivity(), "已经是最新版本", Toast.LENGTH_SHORT).show();
                 }
 
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
 
 
+        } else if (url.contains(yinToJin.getA())) {
+            try {
+                JSONObject jso = new JSONObject(data);
+                silver_bank_info_2.setText("上一天单元转换堂宝数 | " + jso.get("data").toString());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -316,15 +326,12 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
      * @param context
      * @return
      */
-    private int getVersionCode(Context context)
-    {
+    private int getVersionCode(Context context) {
         int versionCode = 0;
-        try
-        {
+        try {
             // 获取软件版本号，对应AndroidManifest.xml下android:versionCode
             versionCode = context.getPackageManager().getPackageInfo("com.ytmall", 0).versionCode;
-        } catch (PackageManager.NameNotFoundException e)
-        {
+        } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
         return versionCode;
@@ -333,19 +340,21 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     @Override
     protected void flagFailed(String url) {
         super.flagFailed(url);
-        if(url.contains(messageApi.getA())){
+        if (url.contains(messageApi.getA())) {
             GetUserInfo();
-        }else if(url.contains(getOrdersStatus.getA())){
+        } else if (url.contains(getOrdersStatus.getA())) {
             getMessage();
         }
     }
+
     private void GetUserInfo() {
-        if (Const.cache.getTokenId()!= null) {
+        if (Const.cache.getTokenId() != null) {
             getUserInfo.tokenId = Const.cache.getTokenId();
             requestNoDialog(getUserInfo);
         }
 
     }
+
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
@@ -391,7 +400,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 startActivity(rechargeIntent);
                 break;
             case R.id.rl_bank_charge:
-                Intent rlBankIntent = new Intent(getActivity(),SilverActivity.class);
+                Intent rlBankIntent = new Intent(getActivity(), SilverActivity.class);
                 startActivity(rlBankIntent);
                 break;
             case R.id.ll_way_accept:
@@ -415,13 +424,13 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 startActivity(refluseIntent);
                 break;
             case R.id.rl_favorite:
-                Intent favoriteIntent=new Intent(getActivity(), FavoriteActivity.class);
+                Intent favoriteIntent = new Intent(getActivity(), FavoriteActivity.class);
                 startActivity(favoriteIntent);
                 break;
             //店铺订单
             case R.id.rl_shop_manage:
 
-                Intent shopIntent=new Intent(getActivity(), ShopOrderManageActivity.class);
+                Intent shopIntent = new Intent(getActivity(), ShopOrderManageActivity.class);
 //                Intent shopIntent=new Intent(getActivity(), MyShopActivity.class);
                 startActivity(shopIntent);
                 break;
@@ -458,18 +467,18 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.rl_update:
                 boolean isWrite = MainActivity.getWritePermission();
-                if (isWrite == true){
+                if (isWrite == true) {
                     getAppVersion();
                 }
                 break;
         }
     }
-    private void getAppVersion(){
+
+    private void getAppVersion() {
         versionparam.a = "getAppVersion";
 //        versionparam = new VersionCheckParam();
 //        versionparam.tokenId = Const.cache.getTokenId();
         request(versionparam);
-
 
 
     }
@@ -525,20 +534,20 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     @Override
     public void onResume() {
         super.onResume();
-        if(Const.isLogin) {
+        if (Const.isLogin) {
             MainActivity.mHost.getTabWidget().setVisibility(View.VISIBLE);
             requestNoDialog(getOrdersStatus);
-            if (Const.user.is_super_user == 0){
+            if (Const.user.is_super_user == 0) {
                 tv_person_points.setText("普通会员");
                 tv_personcount.setVisibility(View.VISIBLE);
                 view1.setVisibility(View.VISIBLE);
-            }else {
+            } else {
                 tv_person_points.setText("经销商");
                 tv_personcount.setVisibility(View.GONE);
                 view1.setVisibility(View.GONE);
             }
-        }else{
-            replaceFragment(new LoginFragment(),false);
+        } else {
+            replaceFragment(new LoginFragment(), false);
         }
 //        RxPermissions rxPermissions = new RxPermissions(getActivity());
 //        rxPermissions.setLogging(true);
@@ -595,9 +604,9 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
 //        requestReadStorageRuntimePermission();
 
 
-
         getOrdersStatus.tokenId = Const.cache.getTokenId();
         initOrderTips();
+
     }
 
     @Override
@@ -627,16 +636,17 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
         confirLogout();
     }
 
-    /**获取商城消息*/
+    /**
+     * 获取商城消息
+     */
     private void getMessage() {
         messageApi.tokenId = Const.cache.getTokenId();
         requestNoDialog(messageApi);
     }
-    private void getPremission(){
+
+    private void getPremission() {
 
     }
-
-
 
 
 }

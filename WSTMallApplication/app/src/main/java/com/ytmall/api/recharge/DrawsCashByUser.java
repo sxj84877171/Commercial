@@ -12,6 +12,7 @@ public class DrawsCashByUser extends AbstractParam {
     public String a = "drawsCashByUser";
     public String drawMoney;
     public String tokenId;
+    public String type ;
 
     @Override
     public String getA() {

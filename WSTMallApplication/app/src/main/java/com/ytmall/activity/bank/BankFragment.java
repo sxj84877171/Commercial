@@ -252,12 +252,14 @@ public class BankFragment extends BaseFragment implements View.OnClickListener ,
             case 100:
                 Uri origina = data.getData();
                 uploadPic.Filedata = new File(getFilePath(origina));
+                uploadPic.dir = "banks_image" ;
                 request(uploadPic);
                 break;
             case 101:// 选择相册
                 if (data != null) {
                     Uri originalUri = data.getData();
                     uploadPic.Filedata = new File(getFilePath(originalUri));
+                    uploadPic.dir = "banks_image" ;
                     request(uploadPic);
                 }
                 break;

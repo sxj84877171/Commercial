@@ -12,6 +12,7 @@ public class BackScroe extends AbstractParam {
     public String a = "updateAccount";
     public String tokenId;
     public String user_link_account;
+    public String jifenPhone ;
 
     @Override
     public String getA() {

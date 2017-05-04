@@ -9,8 +9,8 @@ android {
         minSdkVersion 15
 //        targetSdkVersion 23
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1060
-        versionName "1.5.9"
+        versionCode 1061
+        versionName "1.5.10"
         multiDexEnabled true
     }
     buildTypes {

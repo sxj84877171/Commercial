@@ -35,7 +35,6 @@ public class OrderBean implements Serializable {
 	public List<GoodsListBean> goodlist=new ArrayList<GoodsListBean>();
 	public int shopgoodcount;
 	public double shopgoodtotalprice;
-
 	public int isInvoice;
 	public String invoiceClient;
 	public String userAddress;
@@ -48,4 +47,6 @@ public class OrderBean implements Serializable {
 	public String orderRemarks;
 	public double totalMoney;
 	public double deliverMoney;
+	public String  login_name;
+	public String  user_name;
 }

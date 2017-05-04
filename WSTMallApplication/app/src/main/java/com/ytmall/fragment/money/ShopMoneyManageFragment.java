@@ -172,13 +172,13 @@ public class ShopMoneyManageFragment extends BaseFragment implements View.OnClic
                 Date date = new Date();
 
                 String value = SharedPreferencesUtils.getValue(getActivity(), "day" + date.getYear() + date.getMonth() + date.getDay());
-//                if ("0".equals(value)) {
-//                    Intent i = new Intent(getActivity(), CheckPhoneActivity.class);
-//                    startActivity(i);
-//                } else {
+                if ("0".equals(value)) {
+                    Intent i = new Intent(getActivity(), CheckPhoneActivity.class);
+                    startActivity(i);
+                } else {
                     Intent i = new Intent(getActivity(), ShopTakeMoneyActivity.class);
                     startActivity(i);
-//                }
+                }
                 break;
         }
     }

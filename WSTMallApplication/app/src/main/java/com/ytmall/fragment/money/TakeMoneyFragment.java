@@ -55,7 +55,8 @@ public class TakeMoneyFragment extends BaseFragment implements View.OnClickListe
     private PayPwdPopWindow payPop;
     private CheckPayPwd pwdParam;
 
-    private int type = 0;
+    /// 默认是堂宝
+    private int type = 1;
 
     @Override
     protected void requestSuccess(String url, String data) {
@@ -102,7 +103,7 @@ public class TakeMoneyFragment extends BaseFragment implements View.OnClickListe
     @Override
     public void bindDataForUIElement() {
         if (type == 0) {
-            String hint = "当前可提现金额" + Const.user.distributMoney;
+            String hint = "当前可提现金额" + Const.user.jinMoney;
             etMoney.setHint(hint);
         } else {
             String hint = "当前可提现金额" + Const.user.distributMoney;
@@ -111,12 +112,17 @@ public class TakeMoneyFragment extends BaseFragment implements View.OnClickListe
         String money = etMoney.getText().toString();
         final double dMoney = StrUtil.str2double(money);
 
-        final double balance = StrUtil.str2double(Const.user.distributMoney);
         typeView.setOnClickListener(this);
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (StrUtil.null2Str(Const.user.payPwd).length() > 0) {
+                    double balance = 0;
+                    if(type == 0){
+                        balance = StrUtil.str2double(Const.user.jinMoney);
+                    }else{
+                        balance = StrUtil.str2double(Const.user.distributMoney);
+                    }
                     if ((dMoney - balance) > 0) {
                         Toast.makeText(getActivity(), "可提现余额不足！", Toast.LENGTH_SHORT).show();
 
@@ -157,17 +163,17 @@ public class TakeMoneyFragment extends BaseFragment implements View.OnClickListe
                 payPop.dismiss();
                 break;
             case R.id.type:
-                new AlertDialog.Builder(getActivity()).setSingleChoiceItems(new String[]{"金堂宝可转入可用金额", "银堂宝可转入可用金额"}, type, new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(getActivity()).setSingleChoiceItems(new String[]{"云堂宝可转入可用金额", "堂宝可转入可用金额"}, type, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         type = which;
                         if (which == 0) {
-                            pay_type_name.setText("金堂宝可转入可用金额");
-                            String hint = "当前可提现金额" + Const.user.distributMoney;
+                            pay_type_name.setText("云堂宝可转入可用金额");
+                            String hint = "当前可提现金额" + Const.user.jinMoney;
                             etMoney.setHint(hint);
 
                         } else {
-                            pay_type_name.setText("银堂宝可转入可用金额");
+                            pay_type_name.setText("堂宝可转入可用金额");
                             String hint = "当前可提现金额" + Const.user.distributMoney;
                             etMoney.setHint(hint);
                         }
@@ -185,8 +191,13 @@ public class TakeMoneyFragment extends BaseFragment implements View.OnClickListe
         param = new DrawsCashByUser();
         param.drawMoney = etMoney.getText().toString();
         param.tokenId = Const.cache.getTokenId();
+        if(type == 0){
+            param.a = "jinMoneyToUserMoney" ;
+            param.type = "1" ;
+        }else{
+            param.a = "drawsCashByUser" ;
+        }
         request(param);
-
     }
 
     /**

@@ -154,14 +154,14 @@ public class ShopTakeMoneyFragment extends BaseFragment implements View.OnClickL
                 break;
             case R.id.choose_pay:
             {
-                new AlertDialog.Builder(getActivity()).setSingleChoiceItems(new String[]{"商家账户", "金堂宝"}, type, new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(getActivity()).setSingleChoiceItems(new String[]{"商家账户", "云堂宝"}, type, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         type = which;
                         if (which == 0) {
                             pay_type_name.setText("商家账户");
                         } else {
-                            pay_type_name.setText("金堂宝");
+                            pay_type_name.setText("云堂宝");
                         }
                         dialog.dismiss();
                     }

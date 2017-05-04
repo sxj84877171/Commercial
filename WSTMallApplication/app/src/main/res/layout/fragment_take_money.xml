@@ -39,7 +39,7 @@
             android:layout_marginLeft="20dp"
             android:layout_toRightOf="@id/pay_type"
             android:textColor="@color/red"
-            android:text="金堂宝可转入可用金额" />
+            android:text="云堂宝可转入可用金额" />
 
         <ImageView
             android:layout_width="wrap_content"

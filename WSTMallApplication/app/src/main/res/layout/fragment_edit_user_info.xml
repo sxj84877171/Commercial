@@ -283,6 +283,7 @@
         android:gravity="center_vertical">
 
         <TextView
+            android:id="@+id/reback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="返积分手机号码"
@@ -299,10 +300,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey_hint_text"
+                android:text="0"
                 android:textSize="@dimen/text_size_large" />
 
-
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arrow_right" />
         </LinearLayout>
     </LinearLayout>
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/line_grey" />
 </LinearLayout>
