@@ -122,7 +122,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="提现提醒：\r\n提现申请处理后第三个工作日到账\r\n最低体现金额为1远，每天最多提现15万元\r\n金堂宝提现至银行卡收取15%的手续费"
+        android:text="提现提醒：\r\n提现申请处理后第三个工作日到账\r\n最低体现金额为1远，每天最多提现15万元\r\n金堂宝提现至银行卡收取15%的手续费\r\n商家提现的次数每月不能超过10次；"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
 

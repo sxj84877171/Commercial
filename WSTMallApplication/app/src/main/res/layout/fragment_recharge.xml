@@ -67,7 +67,6 @@
             android:padding="10dp"
             android:background="@drawable/round_white_bg"
             android:textColor="@color/center_bottom"/>
-
         <RelativeLayout
             android:id="@+id/choose_pay"
             android:layout_marginTop="10dp"
@@ -105,24 +104,6 @@
 
 
         </RelativeLayout>
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:padding="10dp"-->
-            <!--android:background="@color/white"-->
-            <!--android:text="@string/txt_recharge_choose"-->
-            <!--android:textSize="@dimen/txt_big_normal"-->
-            <!--android:textColor="@color/center_bottom" />-->
-        <!--<com.lingxiang.ytmall.weight.GridviewForScroll-->
-            <!--android:id="@+id/gridMoney"-->
-            <!--android:numColumns="4"-->
-            <!--android:verticalSpacing="15dp"-->
-            <!--android:horizontalSpacing="12dp"-->
-            <!--android:layout_marginLeft="10dp"-->
-            <!--android:layout_marginTop="15dp"-->
-            <!--android:layout_marginRight="10dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"/>-->
         <Button
             android:id="@+id/btn_recharge"
             android:layout_width="match_parent"
@@ -134,23 +115,15 @@
             android:textSize="@dimen/txt_big"
             android:text="@string/btn_recharge"
             android:layout_marginTop="30dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/txt_middle_normal"
-            android:textColor="@color/center_bottom"
-            android:text="@string/notice_title"
-            android:layout_marginTop="20dp"
-            android:visibility="gone"
-            android:layout_marginLeft="10dp"/>
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/txt_small"
-            android:textColor="@color/edit_txt"
-            android:text="@string/notice_content"
-            android:visibility="gone"
+            android:text="充值说明：\r\n1.第一次到帐70%，第二次到帐30%；\n2.最低充值金额不能小于200，最高不能大于200"
             android:layout_marginLeft="10dp"
+            android:paddingLeft="20dp"
             android:layout_marginTop="8dp"
             android:lineSpacingExtra="4sp"/>
 

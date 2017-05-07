@@ -36,7 +36,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:hint="请输入100的整数倍"
+            android:hint="请输入100的整数倍，不能小于200元"
             android:inputType="numberDecimal"
             android:padding="10dp"
             android:textColor="@color/center_bottom"
@@ -127,6 +127,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:paddingTop="50dp"
-        android:text="充值说明：\n1.充值金额必须是100的倍数；\n2.云堂积分与金额的兑换比例是100:1" />
+        android:text="充值说明：\n1.充值金额必须是100的倍数，不能小于200元；\n2.云堂积分与金额的兑换比例是100:1" />
 
 </LinearLayout>

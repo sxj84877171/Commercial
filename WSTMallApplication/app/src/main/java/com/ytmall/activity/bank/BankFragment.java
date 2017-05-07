@@ -100,14 +100,14 @@ public class BankFragment extends BaseFragment implements View.OnClickListener ,
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.choose_type){
-            new android.support.v7.app.AlertDialog.Builder(getActivity()).setSingleChoiceItems(new String[]{"商城充值", "云堂充值"}, type, new DialogInterface.OnClickListener() {
+            new android.support.v7.app.AlertDialog.Builder(getActivity()).setSingleChoiceItems(new String[]{"商城充值", "云堂积分充值"}, type, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     type = which;
                     if (which == 0) {
                         back_score.setText("商城充值");
                     } else {
-                        back_score.setText("云堂充值");
+                        back_score.setText("云堂积分充值");
                     }
                     dialog.dismiss();
                 }
