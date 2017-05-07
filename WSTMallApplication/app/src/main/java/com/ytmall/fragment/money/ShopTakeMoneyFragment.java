@@ -160,8 +160,10 @@ public class ShopTakeMoneyFragment extends BaseFragment implements View.OnClickL
                         type = which;
                         if (which == 0) {
                             pay_type_name.setText("商家账户");
+                            etMoney.setHint("当前可提现余额"+Const.user.shopMoney);
                         } else {
                             pay_type_name.setText("云堂宝");
+                            etMoney.setHint("当前可提现余额"+Const.user.jinMoney);
                         }
                         dialog.dismiss();
                     }
@@ -208,9 +210,13 @@ public class ShopTakeMoneyFragment extends BaseFragment implements View.OnClickL
     public void bindDataForUIElement() {
         btnSure.setOnClickListener(this);
         llBank.setOnClickListener(this);
-
-        etMoney.setHint("当前可提现余额"+Const.user.shopMoney);
-
+        if (type == 0) {
+            pay_type_name.setText("商家账户");
+            etMoney.setHint("当前可提现余额"+Const.user.shopMoney);
+        } else {
+            pay_type_name.setText("云堂宝");
+            etMoney.setHint("当前可提现余额"+Const.user.jinMoney);
+        }
     }
 
     @Override

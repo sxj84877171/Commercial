@@ -58,5 +58,7 @@ public class ShopOrderBean implements Serializable {
     public String refundRemark;
     public String orderNo;
     public String payFrom;
+    public String login_name;
+    public String user_name;
 
 }

@@ -53,7 +53,10 @@ public class ShopOrderDetailFragment extends BaseFragment {
     ListViewForScroll listPro;
     @InjectView(id = R.id.btnAccept)
     Button btnAccept;
-
+    @InjectView(id = R.id.order_username)
+    TextView order_username;
+    @InjectView(id = R.id.order_acout)
+    TextView order_acout;
     private String orderId;
     private ShopOrderDetail param;
     private ShopOrderProductAdapter adapter;
@@ -90,6 +93,8 @@ public class ShopOrderDetailFragment extends BaseFragment {
                 txtAccount.setText("¥"+orderDetail.order.realTotalMoney);
                 txtOrderNo.setText(orderDetail.order.orderNo);
                 txtOrderTime.setText(orderDetail.order.createTime);
+                order_username.setText(orderDetail.order.user_name);
+                order_acout.setText(orderDetail.order.login_name);
 
 
 

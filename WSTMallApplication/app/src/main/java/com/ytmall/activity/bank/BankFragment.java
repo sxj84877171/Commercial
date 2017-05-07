@@ -100,7 +100,7 @@ public class BankFragment extends BaseFragment implements View.OnClickListener ,
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.choose_type){
-            new android.support.v7.app.AlertDialog.Builder(getActivity()).setSingleChoiceItems(new String[]{"商城充值", "银堂宝充值"}, type, new DialogInterface.OnClickListener() {
+            new android.support.v7.app.AlertDialog.Builder(getActivity()).setSingleChoiceItems(new String[]{"商城充值", "云堂充值"}, type, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     type = which;
@@ -112,9 +112,9 @@ public class BankFragment extends BaseFragment implements View.OnClickListener ,
                     dialog.dismiss();
                 }
             }).show();
-        }if(v.getId() == R.id.back_score_phone){
+        }else if(v.getId() == R.id.back_score_phone){
             showButtomPop(this, new String[] { "拍照", "我的相册" });
-        } else{
+        } else if(v.getId() == R.id.submit_button){
             BankBean bankBean = new BankBean();
             bankBean.bank_name = bank_name.getText().toString();
             bankBean.user_name = use_name.getText().toString();
@@ -252,14 +252,12 @@ public class BankFragment extends BaseFragment implements View.OnClickListener ,
             case 100:
                 Uri origina = data.getData();
                 uploadPic.Filedata = new File(getFilePath(origina));
-                uploadPic.dir = "banks_image" ;
                 request(uploadPic);
                 break;
             case 101:// 选择相册
                 if (data != null) {
                     Uri originalUri = data.getData();
                     uploadPic.Filedata = new File(getFilePath(originalUri));
-                    uploadPic.dir = "banks_image" ;
                     request(uploadPic);
                 }
                 break;
