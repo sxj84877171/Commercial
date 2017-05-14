@@ -10,10 +10,11 @@ import com.ytmall.util.http.RequestType;
 @RequestType(type = HttpMethod.POST)
 public class RechargeOrder extends AbstractParam {
     public String a = "recharge";
-    public String account ;
+    public String account;
     public String remark;
     public String tokenId;
-    public String recharge_id ;
+    public String recharge_id;
+    public String payment_type;
 
     @Override
     public String getA() {

@@ -58,7 +58,8 @@ public class RechargeFragment extends BaseFragment implements View.OnClickListen
                 i.putExtra("money",result.recharge_money);
                 i.putExtra("orderNo",result.recharge_sn);
                 i.putExtra("rechargeId",result.recharge_id);
-                i.putExtra("type",type);
+                i.putExtra("payment_type",result.payment_type);
+                i.putExtra("type","1");
                 startActivity(i);
                 getActivity().finish();
 
@@ -129,7 +130,11 @@ public class RechargeFragment extends BaseFragment implements View.OnClickListen
         param = new RechargeOrder();
         param.tokenId = Const.cache.getTokenId();
         param.account = et_money.getText().toString();
-
+        if (type == 0) {
+            param.payment_type = "1" ;
+        } else {
+            param.payment_type = "2" ;
+        }
         if (et_remark.getText().length() > 0){
             param.remark = et_remark.getText().toString();
         }else {

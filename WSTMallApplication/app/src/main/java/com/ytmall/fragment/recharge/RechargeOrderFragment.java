@@ -42,14 +42,18 @@ public class RechargeOrderFragment extends BaseFragment implements View.OnClickL
     private String money;
     private String orderNo;
     private String rechargeId;
+    private String payment_type;
     private int type = -1;
 
     private RechargeToPay payParam;
 
-    public RechargeOrderFragment(String money, String orderNo, String rechargeId, int type) {
+    public RechargeOrderFragment(){}
+
+    public RechargeOrderFragment(String money, String orderNo, String rechargeId,String payment_type, int type) {
         this.money = money;
         this.orderNo = orderNo;
         this.rechargeId = rechargeId;
+        this.payment_type = payment_type;
         this.type = type;
     }
 
@@ -86,7 +90,7 @@ public class RechargeOrderFragment extends BaseFragment implements View.OnClickL
         txtOrderMoney.setText(money);
 
         btnWeixinPay.setOnClickListener(this);
-        if (type == 1) {
+        if ("2".equals(payment_type)) {
             btnWeixinPay.setText("支付宝支付");
             tWidget.setCenterViewText("支付宝支付");
         } else {
@@ -100,9 +104,13 @@ public class RechargeOrderFragment extends BaseFragment implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnWeixinPay:
-                if (type == 0) {
-                    startActivity(new Intent(getActivity(), WeChatPayActivity.class).putExtra
-                            ("orderId", rechargeId).putExtra("from", "RechargeOrderFragment"));
+                if ("1".equals(payment_type)) {
+                    Intent intent = new Intent(getActivity(), WeChatPayActivity.class).putExtra
+                            ("orderId", rechargeId).putExtra("from", "RechargeOrderFragment");
+                    if(type != 1){
+                        intent.putExtra("isAdd",5);
+                    }
+                    startActivity(intent);
                 } else {
 
 //                    RechargeOrder rechargeOrder = new RechargeOrder();
@@ -120,10 +128,18 @@ public class RechargeOrderFragment extends BaseFragment implements View.OnClickL
 
     private void rechargeToPay() {
         payParam = new RechargeToPay();
-        if (type == 0) {
-            payParam.a = "rechargeToPay";
-        } else {
-            payParam.a = "rechrageToAliPay";
+        if(type == 1) {
+            if ("1".equals(payment_type)) {
+                payParam.a = "rechargeToPay";
+            } else {
+                payParam.a = "rechrageToAliPay";
+            }
+        }else{
+            if ("1".equals(payment_type)) {
+                payParam.a = "rechargeToPayOfYinMoney";
+            } else {
+                payParam.a = "rechargeToYinMoneyOfAliPay";
+            }
         }
         payParam.recharge_id = rechargeId;
         payParam.tokenId = Const.cache.getTokenId();
@@ -141,7 +157,7 @@ public class RechargeOrderFragment extends BaseFragment implements View.OnClickL
 
 //        webView.loadData(content,"text/html","utf-8");
         webView.getSettings().setJavaScriptEnabled(true);
-        String url = Const.API_BASE_URL + "&a="+payParam.getA() + payParam.getString();;
+        String url = Const.API_BASE_URL + "&a="+payParam.getA() + "&" + payParam.getString();;
         webView.loadUrl(url);
         webView.setVisibility(View.VISIBLE);
         webView.setWebViewClient(new WebViewClient(){

@@ -98,9 +98,14 @@ public class SilverFragment extends BaseFragment implements View.OnClickListener
 
     private void subbmit() {
         RechargeOrder param = new RechargeOrder();
+        param.a = "rechargeToYinMoneySn" ;
         param.tokenId = Const.cache.getTokenId();
         param.account = et_money.getText().toString();
-
+        if (type == 0) {
+            param.payment_type = "1" ;
+        } else {
+            param.payment_type = "2" ;
+        }
         if (et_remark.getText().length() > 0) {
             param.remark = et_remark.getText().toString();
         } else {
@@ -120,7 +125,8 @@ public class SilverFragment extends BaseFragment implements View.OnClickListener
             i.putExtra("money", result.recharge_money);
             i.putExtra("orderNo", result.recharge_sn);
             i.putExtra("rechargeId", result.recharge_id);
-            i.putExtra("type",type);
+            i.putExtra("payment_type",result.payment_type);
+            i.putExtra("type","2");
             startActivity(i);
             getActivity().finish();
 

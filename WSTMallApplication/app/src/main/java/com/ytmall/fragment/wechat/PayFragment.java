@@ -39,11 +39,13 @@ public class PayFragment extends BaseFragment {
     private String appId;
     WinXinPay winXinPay = new WinXinPay();
     private RechargeToPay rechargeParam = new RechargeToPay();
+    private int yinTangJiFenWX = 1 ;
 //    private UngradetoPay param = new UngradetoPay();
 
-    public PayFragment(String orderId,String from) {
+    public PayFragment(String orderId,String from,int isYinTangJiFenWX) {
         this.orderId = orderId;
         this.from = from;
+        this.yinTangJiFenWX = isYinTangJiFenWX ;
     }
 
     @Override
@@ -105,6 +107,9 @@ public class PayFragment extends BaseFragment {
     }
     private void rechargeToPay(){
         rechargeParam = new RechargeToPay();
+        if(yinTangJiFenWX == 5){
+            rechargeParam.a = "rechargeToPayOfYinMoney";
+        }
         rechargeParam.recharge_id = orderId;
         rechargeParam.tokenId = Const.cache.getTokenId();
         request(rechargeParam);

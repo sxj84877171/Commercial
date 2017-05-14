@@ -14,8 +14,9 @@ public class WeChatPayActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        WeixinPayBean info = (WeixinPayBean) getIntent().getSerializableExtra("info");
+        int isAdd = getIntent().getIntExtra("isAdd",-1);
         replaceFragment(new PayFragment(getIntent().getStringExtra("orderId")
-                ,getIntent().getStringExtra("from")), false);
+                ,getIntent().getStringExtra("from"),isAdd), false);
     }
 
     @Override

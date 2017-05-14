@@ -151,10 +151,10 @@ public abstract class BaseFragment extends Fragment implements TitleWidget.IOnCl
 			AsyncHttpClient c = new AsyncHttpClient();
 			if (type.type().equals(HttpMethod.GET)) {
 				c.get(url + ap.getString(), textHttpResponseHandler);
-				Log.i("get给服务器的data", url + ap.getString());
+				Log.i("get给服务器的data", url + "&" + ap.getString());
 			} else {
 				c.post(url, p, textHttpResponseHandler);
-				Log.i("post给服务器的data", url + p);
+				Log.i("post给服务器的data", url +"&"+ p);
 			}
 		}
 	}

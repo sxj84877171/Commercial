@@ -15,6 +15,7 @@ public class RechargeOrderBean implements Serializable {
     public String remark;
     public String recharge_sn;
     public String recharge_id;
+    public String payment_type;
 
 
 }
