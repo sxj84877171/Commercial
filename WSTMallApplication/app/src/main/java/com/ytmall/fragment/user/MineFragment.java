@@ -596,7 +596,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
         tWidget.setRightBtnText("注销");
         tWidget.setTitleAlpha(0);
         tWidget.right.setVisibility(View.VISIBLE);
-        tv_person_name.setText(Const.user.getName());
+        tv_person_name.setText(Const.user.getName());//loginName
         tv_person_points.setText(Const.user.userScore);
         if (Const.user.userPhoto != null && !Const.user.userPhoto.equals("")) {
             loadOnRoundImage(Const.BASE_URL + Const.user.userPhoto, ib_personimg);

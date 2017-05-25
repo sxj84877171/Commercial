@@ -23,4 +23,5 @@ public class TakeCashRecordBean implements Serializable{
     public String cashSatus;
     public String targetType;
     public String accTargetId;
+    public String typeName;
 }

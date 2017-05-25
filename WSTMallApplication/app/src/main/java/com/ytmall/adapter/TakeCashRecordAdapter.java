@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.ytmall.R;
 import com.ytmall.bean.TakeCashRecordBean;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 /**
@@ -49,19 +51,22 @@ public class TakeCashRecordAdapter extends BaseAdapter {
             item.txtMoney = (TextView) view.findViewById(R.id.txtMoney);
             item.txtDate = (TextView) view.findViewById(R.id.txtDate);
             item.txtStatus = (TextView) view.findViewById(R.id.txtStatus);
-
+            item.type_name = (TextView)view.findViewById(R.id.type_name);
             view.setTag(item);
         }else {
             item = (HoldItem) view.getTag();
         }
 
-
-        item.txtMoney.setText("提现金额：¥"+list.get(position).money);
-        item.txtDate.setText(list.get(position).createTime);
-        if (list.get(position).cashSatus.equals("0")){
+        TakeCashRecordBean takeCashRecordBean = list.get(position);
+        item.txtMoney.setText("提现金额：¥"+takeCashRecordBean.money);
+        item.txtDate.setText(takeCashRecordBean.createTime);
+        if(takeCashRecordBean.typeName != null){
+            item.type_name.setText("【" + takeCashRecordBean.typeName + "】");
+        }
+        if (takeCashRecordBean.cashSatus.equals("0")){
             item.txtStatus.setText("待处理");
 
-        }else if (list.get(position).cashSatus.equals("1")){
+        }else if (takeCashRecordBean.cashSatus.equals("1")){
             item.txtStatus.setText("已同意");
         }else {
             //2
@@ -71,6 +76,6 @@ public class TakeCashRecordAdapter extends BaseAdapter {
         return view;
     }
     private class HoldItem{
-        private TextView txtMoney,txtDate,txtStatus;
+        private TextView txtMoney,txtDate,txtStatus,type_name;
     }
 }

@@ -61,11 +61,12 @@ public class User implements Serializable {
 	public String user_link_account;
 
 	public String getName(){
-		if(userName==null||userName.equals("")){
+//		if(userName==null||userName.equals("")){
+		// 修改来自2017年5月25日需求，不管前提条件，都显示loginName
 			return loginName;
-		}else{
-			return userName;
-		}
+//		}else{
+//			return userName;
+//		}
 	}
 	
 	public String getSex(){
